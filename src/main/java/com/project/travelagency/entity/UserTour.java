@@ -13,8 +13,8 @@ import javax.persistence.Table;
 public class UserTour {
     @Id
     @Column(name = "user_id")
-    private long user_id;
+    private Long user_id;
 
     @Column(name = "tour_id")
-    private long tour_id;
+    private Long tour_id;
 }

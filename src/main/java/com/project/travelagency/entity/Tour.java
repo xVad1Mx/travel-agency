@@ -16,7 +16,7 @@ import java.time.LocalDate;
 public class Tour {
     @Id
     @Column(name = "id")
-    private long id;
+    private Long id;
 
     @Column(name = "photo")
     private String photo;
@@ -25,7 +25,7 @@ public class Tour {
     private LocalDate date;
 
     @Column(name = "duration")
-    private long duration;
+    private Long duration;
 
     @Column(name = "description")
     private String description;
@@ -37,8 +37,8 @@ public class Tour {
     private String tour_type;
 
     @Column(name = "hotel_id")
-    private long hotel_id;
+    private Long hotel_id;
 
     @Column(name = "country_id")
-    private long country_id;
+    private Long country_id;
 }

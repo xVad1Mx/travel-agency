@@ -14,7 +14,7 @@ import java.time.LocalDate;
 public class Review {
     @Id
     @Column(name = "id")
-    private long id;
+    private Long id;
 
     @Column(name = "date")
     private LocalDate date;
@@ -23,8 +23,8 @@ public class Review {
     private String text;
 
     @Column(name = "user_id")
-    private long user_id;
+    private Long user_id;
 
     @Column(name = "tour_id")
-    private long tour_id;
+    private Long tour_id;
 }

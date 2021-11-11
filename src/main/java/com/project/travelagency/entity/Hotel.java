@@ -12,22 +12,22 @@ public class Hotel {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @Column(name = "name")
     private String name;
 
     @Column(name = "stars")
-    private int stars;
+    private Integer stars;
 
     @Column(name = "website")
     private String website;
 
     @Column(name = "latitude")
-    private float latitude;
+    private Float latitude;
 
     @Column(name = "longitude")
-    private float longitude;
+    private Float longitude;
 
     @Column(name = "features")
     private String features;
