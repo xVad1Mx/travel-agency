@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:1133/Travel-Agency
+    username: postgres
+    password: VadimTrefilov112004
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      show_sql: true
+      ddl-auto: update
+      dialect: org.hibernate.dialect.PostgersSQLDialect
+
+
