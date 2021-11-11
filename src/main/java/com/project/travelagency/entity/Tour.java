@@ -2,10 +2,7 @@ package com.project.travelagency.entity;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.awt.font.NumericShaper;
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -36,9 +33,11 @@ public class Tour {
     @Column(name = "tour_type")
     private String tour_type;
 
-    @Column(name = "hotel_id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "hotel_id")
     private Long hotel_id;
 
-    @Column(name = "country_id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "country_id")
     private Long country_id;
 }
