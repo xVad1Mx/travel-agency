@@ -8,8 +8,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-@ComponentScan({"com.project,travelagency"})
-@EntityScan("com.project.travelagency.scan")
+
+@EntityScan("com.project.travelagency.entity")
 @EnableJpaRepositories("com.project.travelagency.repository")
 @SpringBootApplication
 public class TravelAgencyApplication {
