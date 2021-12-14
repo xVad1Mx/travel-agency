@@ -35,9 +35,9 @@ public class Tour {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "hotel_id")
-    private Long hotel_id;
+    private Hotel hotel;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "country_id")
-    private Long country_id;
+    private Country country;
 }
