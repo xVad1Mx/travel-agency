@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.data.domain.Pageable;
 
 import javax.persistence.EntityNotFoundException;
+import javax.transaction.Transactional;
 import java.util.Optional;
 
 @Service
@@ -18,6 +19,7 @@ public class TourServiceImpl implements TourService {
     private final TourRepository tourRepository;
 
     @Override
+    @Transactional
     public Tour createTour(Tour tour) {
         return tourRepository.save(tour);
     }
@@ -29,7 +31,7 @@ public class TourServiceImpl implements TourService {
 
     @Override
     public Optional<Tour> getTourById(Long id) {
-        return Optional.empty();
+        return tourRepository.findById(id);
     }
 
     @Override
