@@ -35,14 +35,14 @@ public class TourServiceImpl implements TourService {
     }
 
     @Override
-    public Tour updateTour(Long id, Tour tour) {
-        Tour tourToUpdate = tourRepository.findById(id).stream().findFirst().orElseThrow(() -> new EntityNotFoundException(String.format("Can not found entity with id %s", id)));
-        tour.setPhoto(tourToUpdate.getPhoto());
-        tour.setDate(tourToUpdate.getDate());
-        tour.setDuration(tourToUpdate.getDuration());
-        tour.setCost(tourToUpdate.getCost());
-        tour.setDescription(tourToUpdate.getDescription());
-        tour.setTour_type(tourToUpdate.getTour_type());
+    public Tour updateTour(Long id, Tour updatedTour) {
+        Tour tour = tourRepository.findById(id).stream().findFirst().orElseThrow(() -> new EntityNotFoundException(String.format("Can not found entity with id %s", id)));
+        tour.setPhoto(updatedTour.getPhoto());
+        tour.setDate(updatedTour.getDate());
+        tour.setDuration(updatedTour.getDuration());
+        tour.setCost(updatedTour.getCost());
+        tour.setDescription(updatedTour.getDescription());
+        tour.setTour_type(updatedTour.getTour_type());
 
         return tourRepository.save(tour);
     }

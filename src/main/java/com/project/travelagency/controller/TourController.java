@@ -20,9 +20,20 @@ public class TourController {
     public Page<Tour> getAll(@PageableDefault(size = 15, sort = "duration") Pageable pageable) {
         return tourService.getAll(pageable);
     }
+
     @PostMapping
     public Tour create(@RequestBody Tour tour) {
         return tourService.createTour(tour);
+    }
+
+    @PutMapping("/{id}")
+    public Tour update(@PathVariable("id") Long id, @RequestBody Tour tour) {
+        return tourService.updateTour(id, tour);
+    }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable("id") Long id) {
+        tourService.deleteTourById(id);
     }
 
     @GetMapping("/{id}")
