@@ -12,6 +12,7 @@ import java.time.LocalDate;
 @Table(schema = "public", name = "tour")
 public class Tour {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
 
@@ -33,11 +34,11 @@ public class Tour {
     @Column(name = "tour_type")
     private String tour_type;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "hotel_id")
-    private Hotel hotel;
+    //@ManyToOne(fetch = FetchType.LAZY)
+    @Column(name = "hotel_id")
+    private Long hotel;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "country_id")
-    private Country country;
+    //@ManyToOne(fetch = FetchType.LAZY)
+    @Column(name = "country_id")
+    private Long country;
 }
